@@ -1,0 +1,2 @@
+This is my example of jQuery.
+I will also show you how to use ajax to get information from a weather api.

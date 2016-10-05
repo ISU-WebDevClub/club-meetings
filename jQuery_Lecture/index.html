@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery - Ajax Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button id="get_text">Get Text</button>
+<button id="get_stuff">Get Stuff</button>
+<button id="clear_text">Clear Text</button>
+
+<div id="result_div" hidden>
+    <h3 id="text_result"></h3>
+</div>
+<div id="weather" hidden>
+    <div class="item">
+        <h1 id="city_title">City: </h1>
+        <h1 class="result" id="city"></h1>
+    </div>
+
+    <div class="item">
+    <h3 id="temperature_title">Temperature: </h3>
+    <h3 class="result" id="temperature"></h3>
+    </div>
+
+    <div class="item">
+    <h3 id="wind_title">Wind: </h3>
+    <h3 class="result" id="wind"></h3>
+    </div>
+
+    <div class="item">
+    <h3 id="cloudiness_title">Cloudiness: </h3>
+    <h3 class="result" id="cloudiness"></h3>
+    </div>
+</div>
+
+</body>
+<script>
+
+    $('#get_text').click(function(){
+        $('#result_div').show();
+       $.ajax({
+           url: "test.txt",
+           success: function(result) {
+               $("#text_result").html(result);
+           }
+       }) ;
+    });
+
+    $('#get_stuff').click(function(){
+        $('#weather').show();
+        $.getJSON("http://api.wunderground.com/api/e7f7a46aba400efb/conditions/q/IA/Ames.json",function(json){
+            $('#city').html(json['current_observation']['display_location']['city'] + ", " + json['current_observation']['display_location']['state']);
+            $('#temperature').html(json['current_observation']['temperature_string']);
+            $('#wind').html(json['current_observation']['wind_string']);
+            $('#cloudiness').html(json['current_observation']['icon']);
+            console.log(json);
+        });
+    });
+
+    $('#clear_text').click(function(){
+        $('#weather').hide();
+        $('#result_div').hide();
+        $('#city').html(" ");
+        $('#temperature').html(" ");
+        $('#wind').html(" ");
+        $('#cloudiness').html(" ");
+        $('#div1').html(" ");
+    });
+</script>
+</html>
