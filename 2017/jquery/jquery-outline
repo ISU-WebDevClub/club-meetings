@@ -1,0 +1,64 @@
+jQuery
+http://jquery.com/
+
+What is it?
+-----------
+
+A JavaScript library that makes interacting with the DOM (https://en.wikipedia.org/wiki/Document_Object_Model#/media/File:DOM-model.svg), handling events,
+and making Ajax calls (getting and sending data) easy.
+
+It contains  many useful functions such as .each() which allows you
+to loop over a collection of selected HTML elements. Can be used to create, remove, or modify elements.
+
+Important Note
+--------------
+
+Everything that jQuery allows you to do can be done using regular JavaScript.
+
+Take a look at the source: http://code.jquery.com/jquery-3.2.1.js
+
+If you are using only one piece of the library, better to write the raw JavaScript instead.
+
+jQuery      $("#element")
+JavaScript  var x = document.getElementById("mySelect");
+
+jQuery      + 69.6 KB
+JavaScript  + 0 KB
+
+How to Get It
+-------------
+
+We need to link to the file.
+
+  http://code.jquery.com/
+
+Either download it, or copy the <script> tag they provide into your HTML file.
+
+Example:
+
+  <script src="jquery-3.2.1.min.js"> (the file is in the root directory)
+
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+Example Topics
+--------------
+
+Adding jQuery to your site
+Selecting elements
+  By element type
+  By class
+  By id
+  With pseudo-classes like :checked
+Change a property of a selected element
+Loop over many elements and change their properties
+Event handling
+
+Useful functions:
+.children()
+.parents()
+.siblings()
+.data()
+event.which
+Ajax - http://jsonplaceholder.typicode.com/
+
+Anything else you want to see?
