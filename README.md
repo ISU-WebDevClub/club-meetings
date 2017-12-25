@@ -3,7 +3,7 @@
 ## Contents
 
 - [2018](2018)
-  - [Accessibilty](2018/accessibilty)
+  - [Accessibilty](2018/accessibility)
 - [2017](2017)
   - [jQuery](2017/jquery)
 - [2016](2016)
