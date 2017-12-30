@@ -1,0 +1,72 @@
+Progressive Web Apps (PWA)
+
+INTRO
+
+  Goal: Make web applications feel like native mobile applications.
+  
+  It is not any kind of framework, rather an idea.
+  
+  The term was created by engineers at Google, they have a good outline on
+  how to make a PWA: https://developers.google.com/web/progressive-web-apps/
+  
+HISTORY
+  
+  Static (HTML) -> Dynamic from server (PHP, ASP.NET) -> Client side
+  processing (JavaScript)
+  
+  The current state is what allows PWA to exist.
+  
+  In the early days of smartphone, native apps outperformed anything that was
+  accessed through a mobile web browser.
+  
+  Now web apps are a viable alternative to native apps.
+
+  Hybrid apps are made with HTML, CSS, JS instead of Java or Swift.
+  
+PWA
+
+  Modern features such as service workers allow web apps to come even closer
+  to the native OS.
+  
+  What makes a PWA?
+
+    Progressive enhancement: Content first, then add more for more capable
+    browsers or devices.
+    
+    Responsive: The design works on any size screen, mobile or desktop.
+
+    Service workers: Scripting between the app and the network that is used to
+    manage HTTP requests. For a PWA, they should respond with a 200 even if
+    offline. This is a big advantage of PWA. They work offline (as much as
+    possible).
+
+    Feels like an app (gestures, touch on mobile devices).
+
+    Secured over HTTPS.
+
+    Can be found through search engines.
+
+    Can create push notifications and access other device features.
+
+    Can be saved to a phone's home screen.
+
+    Easily shared through a link.
+
+CRITERIA
+
+  Although we listed many features, a PWA does not need to take advantage of
+  all of them.
+
+  There are four technical details that must be met for a browser to recognize
+  a PWA.
+
+  1. Secured with TLS encryption.
+  2. Load when offline. Could be a single page telling the user to get
+     internet.
+  3. Manifest file in JSON format: https://developers.google.com/web/fundamentals/web-app-manifest/
+  4. PNG icon at least 144 by 144.
+
+EXAMPLES
+
+  https://www.chromestatus.com/features
+  https://en.wikipedia.org/wiki/Progressive_web_app#Examples_of_Progressive_Web_Apps
