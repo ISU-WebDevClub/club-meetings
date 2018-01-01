@@ -6,7 +6,7 @@ INTRO
   
   It is not any kind of framework, rather an idea.
   
-  The term was created by engineers at Google, they have a good outline on
+  The term was created by engineers at Google; they have a good outline on
   how to make a PWA: https://developers.google.com/web/progressive-web-apps/
   
 HISTORY
@@ -70,3 +70,7 @@ EXAMPLES
 
   https://www.chromestatus.com/features
   https://en.wikipedia.org/wiki/Progressive_web_app#Examples_of_Progressive_Web_Apps
+
+DEMO
+
+  https://github.com/gokulkrishh/demo-progressive-web-app
