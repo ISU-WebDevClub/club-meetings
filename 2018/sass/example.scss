@@ -1,0 +1,82 @@
+/**
+ * Variables
+ */
+$primary-color: #333;
+$font-stack: sans-serif;
+
+body {
+  color: $primary-color;
+  font: 100% $font-stack;
+}
+
+/**
+ * Nested selectors
+ */
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.item {
+  ul {
+    list-style-type: disc;
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+/**
+ * Mixin
+ */
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+.box {
+  @include transform(rotate(30deg));
+}
+
+/**
+ * Inheritance
+ */
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+}
+
+/**
+ * Import
+ */
+@import 'partial';

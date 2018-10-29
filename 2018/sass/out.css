@@ -1,0 +1,60 @@
+/**
+ * Variables
+ */
+body {
+  color: #333;
+  font: 100% sans-serif;
+}
+
+/**
+ * Nested selectors
+ */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item ul {
+  list-style-type: disc;
+}
+.item ul li {
+  display: inline-block;
+}
+
+/**
+ * Mixin
+ */
+.box {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+/**
+ * Inheritance
+ */
+.warning, .error, .success, .message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+
+footer {
+  height: 510px;
+  background-color: #eee;
+}
+
+/*# sourceMappingURL=out.css.map */
